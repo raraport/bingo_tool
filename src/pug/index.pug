@@ -1,0 +1,28 @@
+doctype
+html(lang="ja")
+  head
+    meta(charset="utf-8")
+    //- meta(name="apple-mobile-web-app-capable" content="yes")
+    //- meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+    //- meta(name="viewport" content="width=320 maximum-scale=1 minimum-scale=1")
+    link(rel='stylesheet', href="./style/index.css")
+    title cube-timer
+  body
+    #app
+      #view
+        #time 00'00"00
+        #grid
+          - for (var i = 0; i < 25; i++)
+            if i == 12
+              //- FREE
+              .cell.selected
+            else
+              .cell
+        #scramble
+      
+      #control
+        .btn#btn-start
+        .btn#btn-stop
+        .btn#btn-reset
+
+  script(src="./app.js")
