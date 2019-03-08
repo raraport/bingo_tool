@@ -8,7 +8,8 @@ const webpackStream = require('webpack-stream')
 const webpackConfig = require('./webpack.config')
 const browserSync = require('browser-sync')
 
-const distdir = process.env.NODE_ENV === 'development' ? './dist/dev' : './dist/prod'
+// const distdir = process.env.NODE_ENV === 'development' ? './dist/dev' : './dist/prod'
+const distdir = './dist/dev'
 
 gulp.task('default', () => {
   browserSync({
